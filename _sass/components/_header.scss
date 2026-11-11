@@ -7,7 +7,7 @@
   }
   .main {
     @include flexbox();
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       @include flex-direction(column);
     }
   }
@@ -41,20 +41,20 @@
   height: map-get($layout, header-height);
   margin-right: map-get($spacers, 3);
   white-space: nowrap;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     height: auto;
     margin-right: 0;
   }
   & > .header__brand {
     @include flex(1);
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       height: map-get($layout, header-height-sm);
     }
   }
   & > .search-button {
     display: none;
     margin-left: map-get($spacers, 2);
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       @include flexbox();
     }
   }
@@ -63,20 +63,20 @@
 .header__brand {
   @include flexbox();
   @include align-items(center);
-  & > svg {
-    width: map-get($base, font-size-h4) * 1.6;
-    height: map-get($base, font-size-h4) * 1.6;
+  & > .header__logo {
+    width: map-get($base, font-size-h4) * 2.2;
+    height: map-get($base, font-size-h4) * 1.4;
     margin-right: map-get($spacers, 3);
-    vertical-align: middle;
-    @include media-breakpoint-down(md) {
-      width: map-get($base, font-size-h4) * 1.2;
-      height: map-get($base, font-size-h4) * 1.2;
+    object-fit: contain;
+    @include media-breakpoint-down(lg) {
+      width: map-get($base, font-size-h4) * 1.8;
+      height: map-get($base, font-size-h4) * 1.15;
     }
   }
   & > a {
     display: inline-block;
     font-size: map-get($base, font-size-h4);
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       font-size: map-get($base, font-size-h4-small);
     }
   }
@@ -88,13 +88,13 @@
     height: map-get($layout, header-height);
     padding-bottom: 0;
     margin: 0;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       padding-bottom: 4px;
       margin: -4px 0 0 0;
     }
     @include menu(3, 2, nowrap);
     @include align-items(center);
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       height: auto;
     }
     .search-button {
