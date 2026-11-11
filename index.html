@@ -1,5 +1,63 @@
 ---
-layout: home
-# articles:
-#   excerpt_type: html
+layout: page
+title: dnc100 | Developer Portfolio
+description: Selected software projects by dnc100.
+show_title: false
+show_date: false
+show_edit_on_github: false
+show_author_profile: false
+show_subscribe: false
+show_tags: false
+sharing: false
+comment: false
 ---
+
+<section class="portfolio-hero" aria-labelledby="portfolio-title">
+  <p class="portfolio-eyebrow">SOFTWARE DEVELOPER · SELECTED WORK</p>
+  <h1 id="portfolio-title">Building useful things with code.</h1>
+  <p class="portfolio-lede">I’m dnc100. I build across web development and creative tools, with a focus on practical ideas and thoughtful execution.</p>
+  <div class="portfolio-actions">
+    <a class="button button--primary button--rounded" href="{{ '/#projects' | relative_url }}">Explore projects</a>
+    <a class="portfolio-text-link" href="https://github.com/dnc100">GitHub profile <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<section class="portfolio-projects" id="projects" aria-labelledby="projects-title">
+  <div class="portfolio-section-heading">
+    <div>
+      <p class="portfolio-eyebrow">A FEW THINGS I’VE MADE</p>
+      <h2 id="projects-title">Selected projects</h2>
+    </div>
+    <a class="portfolio-text-link" href="https://github.com/dnc100?tab=repositories">All repositories <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <div class="portfolio-grid">
+    {% for project in site.data.projects %}
+      <article class="portfolio-card">
+        <div class="portfolio-card-meta">
+          <span class="portfolio-card-number">0{{ forloop.index }}</span>
+          <span>{{ project.category }}</span>
+        </div>
+        <h3>{{ project.name | escape }}</h3>
+        <p>{{ project.description | escape }}</p>
+        <ul class="portfolio-tags" aria-label="Technologies">
+          {% for technology in project.stack %}
+            <li>{{ technology | escape }}</li>
+          {% endfor %}
+        </ul>
+        <a class="portfolio-card-link" href="{{ project.url }}" target="_blank" rel="noopener noreferrer">
+          View repository <span aria-hidden="true">↗</span>
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="portfolio-contact" aria-labelledby="contact-title">
+  <div>
+    <p class="portfolio-eyebrow">LET’S CONNECT</p>
+    <h2 id="contact-title">See what I’m working on.</h2>
+    <p>Browse my public repositories for code, project details, and the latest updates.</p>
+  </div>
+  <a class="button button--secondary button--rounded" href="https://github.com/dnc100">Visit GitHub <span aria-hidden="true">↗</span></a>
+</section>

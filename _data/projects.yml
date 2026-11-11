@@ -1,0 +1,24 @@
+- name: RT Archive
+  category: Audio tools
+  description: A local-first Streamlit prototype for exploring artist music archives, searching tracks, and drafting releases.
+  stack:
+    - Python
+    - Streamlit
+  url: https://github.com/dnc100/rt-archivev
+
+- name: PLYGRND
+  category: Web
+  description: A React frontend project using Vite and Tailwind CSS, set up for fast iteration and experimentation.
+  stack:
+    - React
+    - Vite
+    - Tailwind CSS
+  url: https://github.com/dnc100/PLYGRND
+
+- name: Animator
+  category: Creative tools
+  description: A TypeScript project exploring workflows for bringing animation into After Effects layers.
+  stack:
+    - TypeScript
+    - After Effects
+  url: https://github.com/dnc100/Animator
